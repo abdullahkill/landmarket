@@ -121,12 +121,16 @@
 
 <div class="form-group row">
   
-    <label for="question" class="col-md-4 col-form-label text-md-right">{{ __('question') }}</label>                  
+    <label for="question" class="col-md-4 col-form-label text-md-right">{{ __('role') }}</label>                  
              <div class="col-md-6">                    
-              <input id="question" type="question" class="form-control @error('question') is-invalid @enderror" name="question" value="{{ old('question') }}" required autocomplete="question">
-               @error('question')
+              <select id="role"  class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="question">
+            <option value="2">Seller</option>
+            <option value="3">buyer</option>
+
+             </select>
+               @error('role')
                <span class="invalid-feedback" role="alert">         
-               <strong>{{ $message }}</strong>                             
+               <strong>{{ $role }}</strong>                             
                 </span>                       
                 @enderror                         
                  </div>                     

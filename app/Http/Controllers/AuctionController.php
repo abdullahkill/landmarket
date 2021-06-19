@@ -13,8 +13,7 @@ use Illuminate\Http\Request;
 class AuctionController extends Controller
 {
     function addData(Request $req)
-    // {
-        // if (!Auth::user()->hasPermissionTo('add property'))
+    
         {
 
        
@@ -60,7 +59,6 @@ public function auction(){
 
  public function show() 
     {
-        // if (!Auth::user()->hasPermissionTo('view property'))
         
 
             $data= auction::all();
@@ -87,8 +85,8 @@ public function auction(){
     public function image()
     {
         $data= Property::all();
-        // $result = DB::Table('properties')->select('Image')->get(); Hamza...db
-        return view('front-end.partials.detail')->with('data',$data);//with('result', $result);    
+
+        return view('front-end.partials.detail')->with('data',$data);    
     }
     
 }

@@ -98,18 +98,28 @@
 </div>                     
 </div>
 
-<div class="form-group row">
+
+
+
+
+                 <div class="form-group row">
   
-    <label for="question" class="col-md-4 col-form-label text-md-right">{{ __('question') }}</label>                  
-             <div class="col-md-6">                    
-              <input id="question" type="question" class="form-control @error('question') is-invalid @enderror" name="question" value="{{ old('question') }}" required autocomplete="question">
-               @error('question')
-               <span class="invalid-feedback" role="alert">         
-               <strong>{{ $message }}</strong>                             
-                </span>                       
-                @enderror                         
-                 </div>                     
-                 </div>
+  <label for="question" class="col-md-4 col-form-label text-md-right">{{ __('role') }}</label>                  
+           <div class="col-md-6">                    
+            <select id="question"  class="form-control @error('question') is-invalid @enderror" name="role"  required autocomplete="question">
+        <option value="2">seller </option>
+        <option value="3">User </option>
+             </select>
+             @error('role')
+             <span class="invalid-feedback" role="alert">         
+             <strong>{{ $message }}</strong>                             
+              </span>                       
+              @enderror                         
+               </div>                     
+               </div>
+
+
+
 
                         
 <div class="form-group row mb-0">

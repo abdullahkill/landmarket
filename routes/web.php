@@ -48,12 +48,6 @@ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('users', UserController::class);
-
-
-    Route::resource('roles', RoleController::class);
-
-    Route::resource('permissions', PermissionController::class);
 // Route::get('/user', [UserController::class, 'index']);
 
 Route::resource('posts', 'PostController');
@@ -80,7 +74,7 @@ Route::get('/blog', [frontEndController::class, 'blog']);
 // Route::get('/newregister',[frontEndController::class, 'NewRegister']);
 Route::get('/blogdetail', [frontEndController::class, 'blogdet']);
 Route::get('/Detail/{id}', [PropertylistController::class, 'Detail']);
-Route::get('/register', [AuctionController::class, 'register']);
+Route::get('/registr', [AuctionController::class, 'register']);
 
 // Route::get('/new-register',function(){
 // 	return view('Registernew');

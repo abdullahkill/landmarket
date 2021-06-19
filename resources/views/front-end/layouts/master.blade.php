@@ -59,7 +59,12 @@
                 <li ><a href="{{'/about'}}" style="color: aliceblue">About</a></li>
                 <li><a href="{{'/agent'}}" style="color: aliceblue">Agents</a></li>         
                 <li><a href="{{'/blog'}}" style="color: aliceblue">Blog</a></li>
-                <li><a href="{{'/contact'}}" style="color: aliceblue">Contact</a></li>
+                <li><a href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();"> Logout </a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}                               </form>
+                          </li>
               </ul>
             </div>
             <!-- #Nav Ends -->

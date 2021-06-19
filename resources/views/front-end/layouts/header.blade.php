@@ -23,8 +23,16 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="agents.php">Agents</a></li>         
                 <li><a href="blog.php">Blog</a></li>
-                <li><a href="contact.php">Contact</a></li>
-              </ul>
+                <li><a href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();"> Logout </a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}                               </form>
+                          </li>
+                
+
+      
+         
             </div>
             <!-- #Nav Ends -->
 
